@@ -1,0 +1,17 @@
+<form action="<%= url_for( :action => :parse ) %>" method="post">
+  <div class="form-group">
+    <label for="xmldata">XML data</label>
+    <textarea class="form-control" id="xmldata" name="xmldata" placeholder="Enter XML content"></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Parse</button>
+</form>
+
+<form action="<%= url_for( :action => :parse_url ) %>" method="get">
+  <div class="form-group">
+    <label for="url">XML data</label>
+    <input type="text" class="form-control" id="url" name="url" placeholder="Enter URL with XML content"></input>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Parse</button>
+</form>

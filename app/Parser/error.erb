@@ -1,0 +1,17 @@
+<div class="alert alert-danger w-100" role="alert">
+    Parsing error
+</div>
+
+<div class="alert alert-warning w-100" role="alert">
+    <%= @error %>
+</div>
+
+<div class="alert alert-warning w-100" role="alert">
+    <%= @params.to_s %>
+</div>
+
+<% if @from_network %>
+    <div class="alert alert-warning w-100" role="alert">
+        <%= @from_network.to_s %>
+    </div>
+<% end %>

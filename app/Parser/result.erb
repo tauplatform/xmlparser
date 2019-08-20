@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Document info</div>
+  
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Version</td>
+        <td><%= @doc.version %></td>
+      </tr>
+
+      <tr>
+        <td>DocType</td>
+        <td><%= @doc.doctype.inspect %></td>
+      </tr>
+
+      <tr>
+        <td>Encoding</td>
+        <td><%= @doc.encoding %></td>
+      </tr>
+
+      <tr>
+        <td>Name</td>
+        <td><%= @doc.name.inspect %></td>
+      </tr>
+
+      <tr>
+        <td>XmlDecl</td>
+        <td><%= @doc.xml_decl.inspect %></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Raw data</div>
+  <div class="panel-body" style="height: 100px; overflow: hidden"><%= @xml_escaped %></div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Document structure</div>
+
+  <%= render(partial: 'node', locals: { element: @doc.root, depth: 0, id: 0 }) %>
+</div>
